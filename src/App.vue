@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <Navbar />
+    <Sidebar />
     <v-main>
       <router-view/>
     </v-main>
@@ -10,10 +11,11 @@
 
 <script>
 import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 export default {
   name: 'App',
-  components: { Navbar, Footer },
+  components: { Navbar, Sidebar, Footer },
   data: () => ({
     //
   }),
@@ -29,6 +31,9 @@ html { scroll-behavior: smooth; }
   list-style: none;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar { display: none; }
+
 .container {
   max-width: 1250px !important;
   margin: 0 auto !important;

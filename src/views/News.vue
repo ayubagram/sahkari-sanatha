@@ -3,7 +3,7 @@
     <div class="news">
       <div v-for="(n, i) in news" :key="i" class="news__container">
         <div class="news__info pa-3 pa-md-4">
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum vel quis laudantium</span>
+          <span class="text__ellipse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum vel quis laudantium</span>
         </div>  
         <div class="news__img">
           <img :src="n" alt="News Description">  
@@ -42,15 +42,6 @@ export default {
   background-color: rgb(0 0 0 / 60%); 
   position: absolute;
   bottom: 0;
-}
-.news__info span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;  
-  line-height: 1.25;
-  color: #fff;
 }
 .news__img { height: 200px; }
 @media (max-width: 1060px) {

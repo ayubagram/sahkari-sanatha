@@ -17,6 +17,34 @@
           <img src="https://m.economictimes.com/thumb/msid-54203484,width-1200,height-900,resizemode-4,imgsize-81313/70-per-cent-staff-in-government-offices-watches-videos-on-you-tube.jpg" alt="Introduction to Sahkari Sanstha">
         </div>
       </v-container>
+      <div class="text-center mt-4">
+        <v-btn outlined width="120" color="white" to="/about">view detail</v-btn>
+      </div>
+    </div>
+    <!-- Our Services -->
+    <div class="py-4 py-sm-6 py-md-8 py-lg-10">
+      <div class="text-center headline mb-3">Our Services</div>
+      <v-container class="services">
+        <div class="service__container" v-for="a in 3" :key="a">
+          <div class="service__img">
+            <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
+          </div>
+          <div class="primary pa-3 white--text">ATM Services</div>
+        </div>
+      </v-container>
+    </div>
+
+    <!-- Our News -->
+    <div class="py-4 py-sm-6 py-md-8 py-lg-10">
+      <div class="text-center headline mb-3">Our News</div>
+      <v-container class="services">
+        <div class="service__container" v-for="a in 3" :key="a">
+          <div class="service__img">
+            <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
+          </div>
+          <div class="primary pa-3 white--text">News </div>
+        </div>
+      </v-container>
     </div>
   </div>
 </template>
@@ -34,7 +62,27 @@ export default {
   grid-template-columns: calc(100% - 420px) 400px;
   grid-gap: 20px;
 }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  grid-gap: 20px;
+}
+.service__container { 
+  overflow: hidden;
+  cursor: pointer;
+  transition: ease-in-out 250ms; }
+.service__container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+  border-radius: 4px;
+}
+@media (max-width: 860px) {
+  .services { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); grid-gap: 16px; }
+}
 @media (max-width: 770px) {
   .home__about { grid-template-columns: 100%; }
+}
+@media (max-width: 600px) {
+  .services { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); grid-gap: 12px; }
 }
 </style>

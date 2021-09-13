@@ -79,7 +79,17 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 /* Firefox */
 input[type=number] { -moz-appearance: textfield; }
+
+/* Text Ellipse */
+.text__ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  line-height: 1.25;
+  color: #fff;
+}
 </style>

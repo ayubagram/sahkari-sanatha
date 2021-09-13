@@ -41,7 +41,7 @@ html { scroll-behavior: smooth; }
 }
 p {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: .5px;
   margin-bottom: 0 !important;
 }

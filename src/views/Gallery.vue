@@ -2,7 +2,8 @@
   <v-container>
     <div class="gallery">
       <div class="gallery__img" v-for="(img, i) in images" :key="i">
-        <img :src="img" alt="Image Description">
+        <img :src="img" loading="lazy" alt="Image Description">
+        <!-- <v-img :src="img" :lazy-src="img" alt="Image Description" /> -->
       </div>    
     </div>
   </v-container>  

@@ -4,7 +4,7 @@
       <div style="font-size: 35px; letter-spacing: 1px;" @click="goto">SS</div>
       <v-app-bar-nav-icon @click.stop="setDrawer(!drawer)" class="d-block d-sm-block d-md-block d-lg-none" /> 
       <div class="navs d-none d-sm-none d-md-none d-lg-block">
-        <v-menu offset-y v-for="(nav, n) in navs" :key="n">
+        <v-menu offset-y v-for="(nav, n) in navs" :key="n" open-on-hover>
           <template v-slot:activator="{ on, attrs }">
             <v-btn height="50" tile text :to="nav.to" v-bind="attrs" v-on="on">{{ nav.title }}</v-btn>
           </template>

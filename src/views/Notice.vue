@@ -10,7 +10,7 @@
     </div>
     <div class="d-flex flex-column" style="grid-gap: 20px; min-width: 280px;">
       <div class="quick__card py-3 px-4">
-        <div style="font-size: 16px; font-weight: 400; opacity: .75;" class="mb-6 mt-2">Quick Link</div>
+        <div style="font-weight: 400; opacity: .75;" class="mb-6 mt-2">Quick Link</div>
         <div class="d-flex flex-column mb-6" style="grid-gap: 16px;">
           <div v-for="a in 4" :key="a" class="d-flex" style="grid-gap: 10px;">
             <v-icon v-text="'mdi-check'" color="white" class="pa-1 primary" style="border-radius: 50%; height: 20px; width: 20px; font-size: 14px !important;" />  
@@ -19,7 +19,7 @@
         </div>
       </div>  
       <div class="quick__card py-3 px-4">
-        <div style="font-size: 16px; font-weight: 400; opacity: .75;" class="mb-6 mt-2">Services</div>
+        <div style="font-weight: 400; opacity: .75;" class="mb-6 mt-2">Services</div>
         <div class="d-flex flex-column mb-6" style="grid-gap: 16px;">
           <div v-for="a in 4" :key="a" class="d-flex" style="grid-gap: 10px;">
             <v-icon v-text="'mdi-check'" color="white" class="pa-1 primary" style="border-radius: 50%; height: 20px; width: 20px; font-size: 14px !important;" />  
@@ -28,7 +28,7 @@
         </div>
       </div> 
       <div class="quick__card py-3 px-4">
-        <div style="font-size: 16px; font-weight: 400; opacity: .75;" class="mb-6 mt-2">Services</div>
+        <div style="font-weight: 400; opacity: .75;" class="mb-6 mt-2">Services</div>
         <div class="d-flex flex-column mb-6" style="grid-gap: 16px;">
           <div v-for="a in 4" :key="a" class="d-flex" style="grid-gap: 10px;">
             <v-icon v-text="'mdi-check'" color="white" class="pa-1 primary" style="border-radius: 50%; height: 20px; width: 20px; font-size: 14px !important;" />  

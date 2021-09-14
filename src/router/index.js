@@ -6,6 +6,15 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
+  {
+    path: '/services',
+    redirect: '/services/mobile-banking',
+    component: () => import(/* webpackChunkName: "services" */ '../views/services/Services.vue'),
+    children: [
+      { path: 'mobile-banking', name: 'Mobile Banking', component: () => import(/* webpackChunkName: "mobile" */ '../views/services/Mobile.vue') },
+      { path: 'atm-card-service', name: 'ATM Card Service', component: () => import(/* webpackChunkName: "atm" */ '../views/services/ATM.vue') }
+    ]
+  },
   { path: '/reports', name: 'Reports', component: () => import(/* webpackChunkName: "reports" */ '../views/Reports.vue') },
   { path: '/about', name: 'About', component: () => import(/* webpackChunkName: "about" */ '../views/About.vue') },
   { path: '/notice', name: 'Notice', component: () => import(/* webpackChunkName: "notice" */ '../views/Notice.vue') },

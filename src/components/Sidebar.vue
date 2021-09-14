@@ -81,7 +81,7 @@ export default {
         to: '/services',
         children: [
           { title: 'Mobile Banking', to: '/mobile-banking' },
-          { title: 'ATM Services', to: '/atm' },
+          { title: 'ATM Services', to: '/atm-card-service' },
           { title: 'SMS Banking', to: '/sms-banking' },
           { title: 'Remittance', to: '/remittance' },
           { title: 'Other', to: '/other' }

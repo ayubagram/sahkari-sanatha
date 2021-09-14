@@ -132,10 +132,24 @@ input[type=number] { -moz-appearance: textfield; }
   grid-gap: 30px;  
 }
 .download__links { width: 100%; border: .5px solid rgb(0 0 0 / 10%); }
-.download__links ul li { 
+ul li { 
   list-style: square; 
   cursor: pointer;
 }
+
+/* Table */
+table {
+  border-collapse: collapse;  
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+}
+table tr th, table tr td { 
+  border: .5px solid rgb(0 0 0 / 30%); 
+  height: 50px;
+  padding: 0 10px;
+}
+td { font-weight: 300; }
 
 /* Media Queries */
 @media (max-width: 1060px) {

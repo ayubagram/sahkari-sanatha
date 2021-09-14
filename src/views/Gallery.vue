@@ -3,7 +3,6 @@
     <div class="gallery">
       <div class="gallery__img" v-for="(img, i) in images" :key="i">
         <img :src="img" loading="lazy" alt="Image Description">
-        <!-- <v-img :src="img" :lazy-src="img" alt="Image Description" /> -->
       </div>    
     </div>
   </v-container>  
@@ -36,28 +35,3 @@ export default {
   })  
 }
 </script>
-
-<style>
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));  
-}
-.gallery__img {
-  cursor: pointer;
-  overflow: hidden; 
-}
-.gallery__img img { transition: ease-in-out 250ms; }
-.gallery__img:hover img { transform: scale(1.25); }
-@media (max-width: 1060px) {
-  .gallery {grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); }  
-}
-@media (max-width: 860px) {
-  .gallery {grid-template-columns: repeat(auto-fit, minmax(33%, 1fr)); }  
-}
-@media (max-width: 660px) {
-  .gallery {grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }  
-}
-@media (max-width: 360px) {
-  .gallery {grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }  
-}
-</style>

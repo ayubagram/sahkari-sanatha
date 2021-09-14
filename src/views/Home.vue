@@ -26,10 +26,10 @@
       <div class="text-center headline mb-3">Our Services</div>
       <v-container class="services">
         <div class="service__container" v-for="a in 3" :key="a">
-          <div class="service__text">ATM Service</div>
           <div class="service__img">
             <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
           </div>
+          <div class="pa-3 primary white--text">ATM Service</div>
         </div>
       </v-container>
     </div>
@@ -38,13 +38,39 @@
     <div class="py-8 py-sm-10 py-md-12 py-lg-14" style="background-color: rgb(0 0 0 / 10%);">
       <div class="text-center headline mb-3">Our News</div>
       <v-container class="services">
-        <div class="news__container" v-for="a in 3" :key="a">
-          <div class="news__img">
+        <div class="service__container" v-for="a in 3" :key="a">
+          <div class="service__img">
             <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
           </div>
           <div class="primary white--text pa-3">
             <span class="text__ellipse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam tempora, quos eius amet modi at, quibusdam repudiandae atque neque animi numquam commodi doloremque, vitae minima ipsa id dolorum? Accusamus, non.</span>
           </div>
+        </div>
+      </v-container>
+      <div class="text-center mt-4">
+        <v-btn outlined width="120" color="primary" to="/news">view more</v-btn>
+      </div>
+    </div>
+
+    <!-- Our Gallery -->
+    <div class="py-8 py-sm-10 py-md-12 py-lg-14">
+      <div class="text-center headline mb-3">Our Gallery</div>
+      <v-container class="gallery">
+        <div class="gallery__img" v-for="(img, i) in images" :key="i">
+          <img :src="img" loading="lazy" alt="Image Description">
+        </div>  
+      </v-container>
+      <div class="text-center mt-4">
+        <v-btn outlined width="120" color="primary" to="/gallery">view more</v-btn>
+      </div>
+    </div>
+
+    <!-- Our Centers -->
+    <div class="py-8 py-sm-10 py-md-12 py-lg-14" style="background-color: rgb(0 0 0 / 10%);">
+      <div class="text-center headline mb-3">Our Members Service Center</div>
+      <v-container class="news">
+        <div class="footer__map" v-for="a in 4" :key="a">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.475286597595!2d84.88296471436823!3d27.01514346217793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993558b671d2faf%3A0x8922702ad8a7ddf5!2sAgram%20InfoTech%20Pvt.%20Ltd%2C%20Panitanki%2C%20Birgunj!5e0!3m2!1sen!2snp!4v1613635250851!5m2!1sen!2snp" frameBorder="0" allowFullScreen="" aria-hidden="false" tabIndex="0" title="Agram Infotech"></iframe>      
         </div>
       </v-container>
     </div>
@@ -54,7 +80,15 @@
 <script>
 import Carousel from '../components/Carousel.vue'
 export default {
-  components: { Carousel }
+  components: { Carousel },
+  data: () => ({
+    images: [
+      'https://images.indianexpress.com/2020/06/office-new-1200.jpg',
+      'https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/02/15/957659-offices-guidelines.jpg',
+      'https://m-moser.imgix.net/uploads/2019_06/Hyatt_1-3288_AJL_-_HKG_2018-08_0124-HDR_1.jpg',
+      'https://assets-news.housing.com/news/wp-content/uploads/2019/02/13152538/Vastu-tips-for-office-to-bring-prosperity-at-work-FB-1200x700-compressed.jpg',
+    ],
+  })
 }
 </script>
 
@@ -74,28 +108,11 @@ export default {
   overflow: hidden;
   cursor: pointer;
   transition: ease-in-out 250ms; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .service__container:hover {
   transform: translateY(-6px);
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   border-radius: 4px;
-}
-.service__text {
-  position: absolute;
-  background-color: rgba(255, 255, 255, .15);  
-  backdrop-filter: blur(5px);
-  height: 80%;
-  width: 80%;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 1px;
 }
 @media (max-width: 860px) {
   .services { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }

@@ -1,12 +1,12 @@
 <template>
   <v-container>
     <div class="news">
-      <div v-for="(n, i) in news" :key="i" class="news__container">
-        <div class="news__info pa-3 pa-md-4">
-          <span class="text__ellipse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum vel quis laudantium</span>
-        </div>  
+      <div v-for="(n, i) in news" :key="i" class="news__container">  
         <div class="news__img">
           <img :src="n" alt="News Description">  
+        </div>
+        <div class="pa-3">
+          <p class="text__ellipse black--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt fuga cum provident illo, commodi obcaecati impedit, iste soluta quasi sequi voluptate earum laborum deserunt quas harum, consequuntur tempore culpa tenetur.</p>
         </div>
       </div>  
     </div>
@@ -30,27 +30,3 @@ export default {
   })  
 }
 </script>
-
-<style>
-.news {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
-  grid-gap: 12px;  
-}
-.news__container { position: relative; }
-.news__info {
-  background-color: rgb(0 0 0 / 60%); 
-  position: absolute;
-  bottom: 0;
-}
-.news__img { height: 200px; }
-@media (max-width: 1060px) {
-  .news { grid-template-columns: repeat(auto-fit, minmax(32%, 1fr)); }  
-}
-@media (max-width: 760px) {
-  .news { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }  
-}
-@media (max-width: 500px) {
-  .news { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }  
-}
-</style>

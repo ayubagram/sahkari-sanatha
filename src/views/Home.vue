@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Carousel />
-    <div class="primary py-4 py-sm-6 py-md-8 py-lg-10">
+    <div class="primary py-8 py-sm-10 py-md-12 py-lg-14">
       <v-container class="home__about">
         <div class="white--text">
           <div class="display-1 mb-2">Introduction to Sahkari Sanstha</div>
@@ -22,27 +22,29 @@
       </div>
     </div>
     <!-- Our Services -->
-    <div class="py-4 py-sm-6 py-md-8 py-lg-10">
+    <div class="py-8 py-sm-10 py-md-12 py-lg-14">
       <div class="text-center headline mb-3">Our Services</div>
       <v-container class="services">
         <div class="service__container" v-for="a in 3" :key="a">
+          <div class="service__text">ATM Service</div>
           <div class="service__img">
             <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
           </div>
-          <div class="primary pa-3 white--text">ATM Services</div>
         </div>
       </v-container>
     </div>
 
     <!-- Our News -->
-    <div class="py-4 py-sm-6 py-md-8 py-lg-10">
+    <div class="py-8 py-sm-10 py-md-12 py-lg-14" style="background-color: rgb(0 0 0 / 10%);">
       <div class="text-center headline mb-3">Our News</div>
       <v-container class="services">
-        <div class="service__container" v-for="a in 3" :key="a">
-          <div class="service__img">
+        <div class="news__container" v-for="a in 3" :key="a">
+          <div class="news__img">
             <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
           </div>
-          <div class="primary pa-3 white--text">News </div>
+          <div class="primary white--text pa-3">
+            <span class="text__ellipse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam tempora, quos eius amet modi at, quibusdam repudiandae atque neque animi numquam commodi doloremque, vitae minima ipsa id dolorum? Accusamus, non.</span>
+          </div>
         </div>
       </v-container>
     </div>
@@ -65,24 +67,43 @@ export default {
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-gap: 20px;
+  grid-gap: 12px;
 }
 .service__container { 
+  position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: ease-in-out 250ms; }
+  transition: ease-in-out 250ms; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .service__container:hover {
   transform: translateY(-6px);
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   border-radius: 4px;
 }
+.service__text {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+  height: 80%;
+  width: 80%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 @media (max-width: 860px) {
-  .services { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); grid-gap: 16px; }
+  .services { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }
 }
 @media (max-width: 770px) {
   .home__about { grid-template-columns: 100%; }
 }
 @media (max-width: 600px) {
-  .services { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); grid-gap: 12px; }
+  .services { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }
 }
 </style>

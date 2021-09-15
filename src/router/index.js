@@ -14,7 +14,8 @@ const routes = [
       { path: 'mobile-banking', name: 'Mobile Banking', component: () => import(/* webpackChunkName: "mobile" */ '../views/services/Mobile.vue') },
       { path: 'atm-card-service', name: 'ATM Card Service', component: () => import(/* webpackChunkName: "atm" */ '../views/services/ATM.vue') },
       { path: 'sms-banking', name: 'SMS Banking', component: () => import(/* webpackChunkName: "sms" */ '../views/services/SMS.vue') },
-      { path: 'remittance', name: 'Remittance', component: () => import(/* webpackChunkName: "remittance" */ '../views/services/Remittance.vue') }
+      { path: 'remittance', name: 'Remittance', component: () => import(/* webpackChunkName: "remittance" */ '../views/services/Remittance.vue') },
+      { path: 'other', name: 'Other', component: () => import(/* webpackChunkName: "other" */ '../views/services/Other.vue') }
     ]
   },
   { path: '/reports', name: 'Reports', component: () => import(/* webpackChunkName: "reports" */ '../views/Reports.vue') },

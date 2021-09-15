@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <TopHeader />
     <Navbar />
     <Sidebar />
     <v-main>
@@ -10,12 +11,13 @@
 </template>
 
 <script>
+import TopHeader from './components/TopHeader'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
 export default {
   name: 'App',
-  components: { Navbar, Sidebar, Footer },
+  components: { TopHeader, Navbar, Sidebar, Footer },
   data: () => ({
     //
   }),
@@ -70,7 +72,7 @@ img {
   line-height: 1 !important;
   font-size: small !important;
 }
-.v-text-field--outlined.v-input--is-focused fieldset { border: 1px solid #1976d2 !important; }
+.v-text-field--outlined.v-input--is-focused fieldset { border: 1px solid #00a652 !important; }
 .v-text-field--outlined.v-input--has-state fieldset { border: 1px solid #ff6666 !important; }
 .v-text-field--outlined.v-input--dense .v-label { top: 14px !important; }
 /* Chrome, Safari, Edge, Opera */

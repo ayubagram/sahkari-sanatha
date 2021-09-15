@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark elevate-on-scroll height="50">
+  <v-app-bar color="primary" dark elevate-on-scroll height="50">
     <v-container class="d-flex justify-space-between px-0 px-lg-3">
       <div style="font-size: 35px; letter-spacing: 1px;" @click="goto">SS</div>
       <v-app-bar-nav-icon @click.stop="setDrawer(!drawer)" class="d-block d-sm-block d-md-block d-lg-none" /> 

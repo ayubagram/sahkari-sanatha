@@ -3,7 +3,8 @@
     <TopHeader />
     <Navbar />
     <Sidebar />
-    <v-main>
+    <Breadcumb />
+    <v-main :class="$route.path !== '/' ? 'py-8' : ''">
       <router-view/>
     </v-main>
     <Footer />
@@ -14,10 +15,11 @@
 import TopHeader from './components/TopHeader'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
+import Breadcumb from './components/Breadcumb'
 import Footer from './components/Footer'
 export default {
   name: 'App',
-  components: { TopHeader, Navbar, Sidebar, Footer },
+  components: { TopHeader, Navbar, Sidebar, Breadcumb, Footer },
   data: () => ({
     //
   }),
@@ -121,22 +123,26 @@ input[type=number] { -moz-appearance: textfield; }
 }
 .news__img { height: 200px; }
 
-/* Quick Cards */
-.quick__card {
-  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
-  border-top: 4px solid #1976d2;
-}
-
 /* Download */
 .download {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   grid-gap: 30px;  
 }
-.download__links { width: 100%; border: .5px solid rgb(0 0 0 / 10%); }
-ul li { 
-  list-style: square; 
-  cursor: pointer;
+.download__links { 
+  width: 100%; 
+  border: .5px solid rgb(0 0 0 / 10%); 
+}
+ul li { list-style: square; }
+.quick__card {
+  box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);
+  border-top: 4px solid #00a652;
+  border-radius: 6px;
+}
+.download__title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 /* Table */

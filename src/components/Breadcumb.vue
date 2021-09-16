@@ -1,0 +1,40 @@
+<template>
+  <div class="grey lighten-4" v-if="this.$route.path !== '/'">
+    <div class="container">
+      <div class="display-1 text-uppercase py-8" style="color: #2E3192;">{{ $route.name }}</div>  
+    </div>
+    <div style="border-top: 1px solid rgb(128 128 128 / 50%); border-bottom: 1px solid rgb(128 128 128 / 50%);">
+      <div class="container">
+        <v-breadcrumbs class="pa-0" :items="items" divider="/" />
+      </div>    
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  computed: {
+    items() {
+      let pathArray = this.$route.path.split("/")
+      pathArray.shift()
+      let breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
+        let text = path.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('-')
+        breadcrumbArray.push({
+          path: path,
+          href: breadcrumbArray[idx - 2] ? "/" + breadcrumbArray[idx - 2].path + "/" + breadcrumbArray[idx - 1].path + "/" + path : breadcrumbArray[idx - 1] ? "/" + breadcrumbArray[idx - 1].path + "/" + path : "/" + path,
+          disabled: true,
+          text: text,
+        });
+        return breadcrumbArray;
+      }, [])
+      return breadcrumbs;
+    }
+  },
+
+}
+</script>
+
+<style>
+.theme--light.v-breadcrumbs .v-breadcrumbs__item--disabled { color: rgb(0 0 0 / 70%) !important; }
+.v-breadcrumbs li { cursor: auto !important; }
+</style>

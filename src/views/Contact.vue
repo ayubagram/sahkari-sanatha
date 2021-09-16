@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="contact py-4 py-sm-6 py-md-8 py-lg-10">
+    <div class="contact">
       <div class="contact__info">
         <div class="headline mb-3">Contact Details</div>  
         <div class="pa-4 pa-sm-5 pa-md-6 pa-lg-7 grey lighten-4 d-flex flex-column" style="grid-gap: 20px;">

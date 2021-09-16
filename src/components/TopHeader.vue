@@ -14,14 +14,14 @@
             </div>
         </div>
         <div>
-          <div class="title mb-1" style="line-height: 1; color: #2E3192;">Member Service Center</div>
+          <div class="title mb-2" style="line-height: 1; color: #2E3192;">Member Service Center</div>
           <div class="service__center">
-            <div v-for="(center, c) in centers" :key="c" class="d-flex flex-wrap primary--text align-center" style="grid-gap: 4px;">
+            <div v-for="(center, c) in centers" :key="c" class="d-flex flex-wrap primary--text align-center" style="grid-gap: 4px; font-size: 13px;">
               <v-icon v-text="'mdi-home'" color="primary" /> <p>{{ center.address }}</p> &nbsp;
               <v-icon v-text="'mdi-phone'" color="primary" /> <p>{{ center.phone }}</p>
             </div>
           </div>
-          <div class="red--text mt-1" style="font-style: oblique; font-weight: 500;">Office Time: 9.30 AM to 5.30 PM</div>
+          <div class="red--text mt-2" style="font-style: oblique; font-weight: 500;">Office Time: 9.30 AM to 5.30 PM</div>
         </div>
       </div>
     </v-container>

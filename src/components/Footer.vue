@@ -3,7 +3,7 @@
     <v-container >
       <div class="footer__info">
         <div class="footer__contact">
-          <div class="headline mb-3">Contact Us</div>  
+          <div class="download__title">Contact Us</div>  
           <div class="d-flex flex-column" style="grid-gap: 20px;">
             <div class="d-flex" style="grid-gap: 12px;" v-for="(contact, c) in contacts" :key="c">
               <v-icon size="20" color="primary" v-text="contact.icon" />

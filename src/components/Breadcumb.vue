@@ -1,9 +1,9 @@
 <template>
-  <div class="grey lighten-4" v-if="this.$route.path !== '/'">
+  <div style="background-color: #f5f5f5;" v-if="this.$route.path !== '/'">
     <div class="container">
-      <div class="display-1 text-uppercase py-8" style="color: #2E3192;">{{ $route.name }}</div>  
+      <div class="text-uppercase py-4" style="color: #2E3192; font-size: 2.3rem;">{{ $route.name }}</div>  
     </div>
-    <div style="border-top: 1px solid rgb(128 128 128 / 50%); border-bottom: 1px solid rgb(128 128 128 / 50%);">
+    <div style="border-top: 1px solid rgb(128 128 128 / 30%); border-bottom: 1px solid rgb(128 128 128 / 30%);">
       <div class="container">
         <v-breadcrumbs class="pa-0" :items="items" divider="/" />
       </div>    

@@ -44,12 +44,21 @@ export default {
         icon: 'mdi-account',
         to: '/about',
         children: [
-          { title: 'About', to: '/about' },
+          { title: 'About Sahkari', to: '/sahkari' },
           { title: 'Membership', to: '/membership' },
+          { title: 'Mission, Vision & Objectives', to: '/mission-vision' },
+          { title: 'Organizational Structure', to: '/organizational-structure' },
+          { title: 'Chariman\'s Message', to: '/chairmans-message' },
+          { title: 'Manager\'s Message', to: '/managers-message' },
+          { title: 'Management Teams', to: '/management-teams' },
           { title: 'Department', to: '/department' },
-          { title: 'Management Team', to: '/management-team' },
-          { title: 'Business Hour', to: '/business-hour' },
-          { title: 'Our Culture', to: '/our-culture' }
+          { title: 'Branch (M.S.C)', to: '/branch-msc' },
+          { title: 'Business Hour', to: '/business-hours' },
+          { title: 'Principles of Credi Union Operating', to: '/principle-of-credit-union-operating' },
+          { title: 'Principles of Co-Operation', to: '/principle-of-co-operation' },
+          { title: 'Our Core Values', to: '/our-core-values' },
+          { title: 'Our Culture', to: '/our-culture' },
+          { title: 'FAQ\'s', to: '/faq' }
         ]
       },
       {
@@ -57,9 +66,21 @@ export default {
         icon: 'mdi-finance',
         to: '/deposite',
         children: [
-          { title: 'Saving Scheme', to: '/saving-scheme' },
-          { title: 'Labour Saving', to: '/labour-saving' },
+          { title: 'Savings Schemes', to: '/saving-scheme' },
+          { title: 'Periodic(Fixed) Deposite Schemes', to: '/saving-scheme' },
+          { title: 'Reccuring(Regular) Deposite Schemes', to: '/saving-scheme' },
+          { title: 'Members Cumpulsion Savings', to: '' },
+          { title: 'Kumari 365 Days Ragular Saving', to: '' },
           { title: 'Travel Saving', to: '/travel-saving' },
+          { title: 'Farmers Saving', to: '/travel-saving' },
+          { title: 'Labour Saving', to: '/labour-saving' },
+          { title: 'Micro Finance Group Saving', to: '/labour-saving' },
+          { title: 'Members Life Secured Saving', to: '' },
+          { title: 'Khutruke Saving', to: '' },
+          { title: 'Health Treatement Saving', to: '' },
+          { title: 'Self Employment Saving', to: '' },
+          { title: 'Youth & Child Saving', to: '' },
+          { title: 'Other', to: '' }
         ]
       },
       {
@@ -67,12 +88,21 @@ export default {
         icon: 'mdi-cash',
         to: '/loan',
         children: [
+          { title: 'Agriculture & Farming Loan', to: '' },
           { title: 'Business Loan', to: '/business-loan' },
+          { title: 'Health Treatement Loan', to: '/business-loan' },
+          { title: 'Cottage & Small Industries Business Promotion Load', to: '/business-loan' },
+          { title: 'Real Estate Loan', to: '/real-estate-loan' },
           { title: 'Home Loan', to: '/home-loan' },
           { title: 'Education Loan', to: '/education-loan' },
-          { title: 'Real Estate Loan', to: '/real-estate-loan' },
+          { title: 'Hire Purchase Loan', to: '/real-estate-loan' },
+          { title: 'Women Entrepreneur Loan', to: '/real-estate-loan' },
+          { title: 'Youth Entrepreneur Loan', to: '/real-estate-loan' },
+          { title: 'Life of Credit Loan', to: '/real-estate-loan' },
+          { title: 'Periodic(Fixed) Deposite against Loan', to: '/real-estate-loan' },
+          { title: 'Microfinance Loan', to: '/microfinance-loan' },
           { title: 'Trading Loan', to: '/trading-loan' },
-          { title: 'Microfinance Loan', to: '/microfinance-loan' }
+          { title: 'Other Loan', to: '/trading-loan' },
         ]
       },
       {
@@ -82,8 +112,8 @@ export default {
         children: [
           { title: 'Mobile Banking', to: '/mobile-banking' },
           { title: 'ATM Services', to: '/atm-card-service' },
-          { title: 'SMS Banking', to: '/sms-banking' },
-          { title: 'Remittance', to: '/remittance' },
+          { title: 'SMS Banking Services', to: '/sms-banking' },
+          { title: 'Remittance Services', to: '/remittance-services' },
           { title: 'Other', to: '/other' }
         ]
       },

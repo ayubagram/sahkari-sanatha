@@ -1,7 +1,7 @@
 <template>
   <div class="downloads">
     <v-container class="download">
-      <div class="download__links pa-3 pa-sm-4 pa-md-5 pa-lg-6">
+      <div class="download__links">
         <div class="download__title">Download Our PDF Files</div>  
         <ul class="d-flex flex-column mt-5" style="grid-gap: 20px;">
           <li v-for="a in 8" :key="a">
@@ -10,7 +10,7 @@
           </li>  
         </ul>
       </div>
-      <div class="d-flex flex-column" style="grid-gap: 20px; min-width: 280px;">
+      <div class="cards__with__links">
         <Card title="Links" />
         <Card title="Services" />
         <Card title="News" />  

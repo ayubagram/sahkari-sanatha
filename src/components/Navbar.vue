@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" dark elevate-on-scroll height="50">
+  <v-app-bar color="primary" dark :app="fixed" elevate-on-scroll height="50">
     <v-container class="px-0 px-lg-3">
       <v-app-bar-nav-icon @click.stop="setDrawer(!drawer)" class="d-block d-sm-block d-md-block d-lg-none" /> 
       <div class="navs d-none d-sm-none d-md-none d-lg-block">
@@ -32,7 +32,7 @@ export default {
         title: 'About Us',
         to: '/about',
         children: [
-          { title: 'About', to: '/sahkari' },
+          { title: 'About Sahkari', to: '/sahkari' },
           { title: 'Membership', to: '/membership' },
           { title: 'Mission, Vision & Objectives', to: '/mission-vision' },
           { title: 'Organizational Structure', to: '/organizational-structure' },

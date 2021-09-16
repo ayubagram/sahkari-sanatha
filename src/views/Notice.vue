@@ -1,7 +1,7 @@
 <template>
   <div class="notice">
     <v-container class="download">
-      <div class="download__links pa-3 pa-sm-4 pa-md-5 pa-lg-6">
+      <div class="download__links">
         <ul class="d-flex flex-column" style="grid-gap: 20px;">
           <li v-for="a in 4" :key="a">
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -9,7 +9,7 @@
           </li>  
         </ul>
       </div>
-      <div class="d-flex flex-column" style="grid-gap: 20px; min-width: 280px;">
+      <div class="cards__with__links">
         <Card title="Links" />
         <Card title="Services" />  
       </div>

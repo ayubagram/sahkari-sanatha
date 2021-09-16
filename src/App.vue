@@ -34,6 +34,7 @@ html { scroll-behavior: smooth; }
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 ::-webkit-scrollbar { display: none; }
@@ -44,10 +45,11 @@ html { scroll-behavior: smooth; }
   padding: 12px !important;
 }
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: .5px;
   margin-bottom: 0 !important;
+  text-align: justify;
 }
 .v-btn span {
   font-size: 14px !important;
@@ -125,25 +127,66 @@ input[type=number] { -moz-appearance: textfield; }
 
 /* Download */
 .download {
-  display: flex;
+  display: grid;
   align-items: flex-start;
-  grid-gap: 30px;  
+  grid-template-columns: calc(100% - 310px) 280px;
+  grid-gap: 30px;
 }
 .download__links { 
   width: 100%; 
   border: .5px solid rgb(0 0 0 / 10%); 
+  padding: 28px 36px;
 }
-ul li { list-style: square; }
+.cards__with__links {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px; 
+  min-width: 280px;
+}
+ul li { 
+  list-style: circle;
+  font-size: 1rem;
+  letter-spacing: .7px;
+  font-weight: 300;
+  color: #337ab7;
+}
 .quick__card {
-  box-shadow: 0 3px 15px 0 rgb(0 0 0 / 20%);
+  box-shadow: 1px 5px 15px 0 rgb(0 0 0 / 20%);
   border-top: 4px solid #00a652;
   border-radius: 6px;
 }
 .download__title {
   font-size: 28px;
-  font-weight: 500;
-  line-height: 1;
+  font-weight: 400;
+  color: #337ab7;
+  line-height: 1.25;
+  margin-bottom: 12px;
 }
+
+.mission span, .mission li, .remittance li {
+  font-size: 0.85rem;
+  letter-spacing: .7px;
+  font-weight: 300;
+}
+.remittance li { font-size: 1rem !important; }
+.mission ul li, .remittance li { list-style: decimal !important; color: #444444; }
+
+/* Chairmain */
+.chairman {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+.chairmain__img { max-width: 300px; }
+
+/* Management Team */
+.management__teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+  grid-gap: 12px;
+}
+.team__member__img { height: 200px; }
+
 
 /* Table */
 table {
@@ -163,16 +206,33 @@ td { font-weight: 300; }
 @media (max-width: 1060px) {
   .gallery {grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); }  
   .news { grid-template-columns: repeat(auto-fit, minmax(32%, 1fr)); }  
+  .download__links { padding: 24px 32px; }
+}
+@media (max-width: 900px) {
+  .chairman { 
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+  }
+  .management__teams { grid-template-columns: repeat(auto-fit, minmax(31%, 1fr)); }
+  .team__member__img { height: 180px; }
 }
 @media (max-width: 860px) {
   .gallery {grid-template-columns: repeat(auto-fit, minmax(33%, 1fr)); }  
+  .download__links { padding: 20px 28px; }
+  .download__title { font-size: 25px; }
 }
 @media (max-width: 760px) {
   .news { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }  
-  .download { flex-direction: column; }
+  .download { grid-template-columns: 100%; }
+  .download__links { padding: 16px 24px; }
+  .download__title { font-size: 22px; }
 }
 @media (max-width: 660px) {
   .gallery {grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }  
+  .download__links { padding: 16px 20px; }
+  .management__teams { grid-template-columns: repeat(auto-fit, minmax(48%, 1fr)); }
+  .team__member__img { height: 160px; }
 }
 @media (max-width: 500px) {
   .news { grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); }  

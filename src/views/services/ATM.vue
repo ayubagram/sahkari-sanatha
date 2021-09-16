@@ -1,15 +1,15 @@
 <template>
   <v-container>
-    <div style="font-size: 25px;" class="mb-3">KUSCCOOP SCT DEBIT CARD</div> 
+    <div class="mb-3 download__title">KUSCCOOP SCT DEBIT CARD</div> 
     <p class="text-justify">KUSCCOOP Debit card enables you to make electronic transactions (cash withdrawal and purchase of goods and services through various POS terminals) at any time. KUSCCOOP Debit card is associated with Smart Choice Technologies Ltd (SCT). With KUSCCOOP Debit Card (SCT-UPI), individual can have easy access to their nominated account maintained with Kumari Saving & Credit Co-Operative Ltd. (KUSCCOOP) from any ATM location that is spread over more than 3,000 ATM terminals.</p><br>
     <p class="text-justify">Further you can make purchase of goods and services from more than 10,000 merchant locations through Point-of-Sale (POS) terminals. KUSCCOOP Debit card is accepted at all ATMs associated to SCT network and merchant locations that display/accept SCT UPI Debit Cards.</p> 
     
-    <div style="font-size: 25px;" class="mb-1 mt-10">Key Features</div>
+    <div  class="download__title mt-10">Key Features</div>
     <ul>
       <li v-for="(item, i) in features" :key="i" style="font-weight: 300;">{{ item }}</li>  
     </ul>
     
-    <div style="font-size: 25px;" class="mb-3 mt-10">Transaction Limit</div>
+    <div class="download__title mt-10">Transaction Limit</div>
     <table>
       <thead>
         <tr>

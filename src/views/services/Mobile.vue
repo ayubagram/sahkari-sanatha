@@ -2,7 +2,7 @@
   <v-container>
     <p class="text-justify">In our continuous efforts to provide innovative products to our members, Kumari Saving & Credit co-operative Ltd (KUSCCOOP) has  launched Kumari Saving & Credit co-operative Ltd (KUSCCOOP) Smart, a Mobile Banking application which provides access for our members to their accounts through mobile phone in a secured manner in both SMS and GPRS base.</p> <br>
     <p class="text-justify">It is Anywhere, Anytime, Any network base application, which provides member account information and real time transaction activities to the users. Members can also execute financial transaction in accounts within Kumari Saving & Credit co-operative Ltd (KUSCCOOP) and other Banks and Financial Institutions under the network of Kumari Saving & Credit co-operative Ltd (KUSCCOOP) Smart.</p>
-    <div style="font-size: 25px;" class="mt-4 mb-2">Services available in KUSCCOOP Smart</div>
+    <div class="mt-4 download__title">Services available in KUSCCOOP Smart</div>
     <table>
       <thead>
         <tr>

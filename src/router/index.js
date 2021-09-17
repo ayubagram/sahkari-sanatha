@@ -22,11 +22,11 @@ const routes = [
       { path: 'department', name: 'Department', component: () => import(/* webpackChunkName: "department" */ '../views/about/Department.vue') },
       { path: 'branch-msc', name: 'Branch(M.S.C.)', component: () => import(/* webpackChunkName: "branch" */ '../views/about/Branch.vue') },
       { path: 'business-hours', name: 'Business Hours', component: () => import(/* webpackChunkName: "business hours" */ '../views/about/BusinessHour.vue') },
-      { path: '/principle-of-credit-union-operating', name: 'Principle of Credit Union Operating', component: () => import('../views/about/PCUO.vue') },
-      { path: '/principle-of-co-operation', name: 'Principle of Co-Operation', component: () => import('../views/about/PCO.vue') },
-      { path: '/our-core-values', name: 'Our Core Values', component: () => import('../views/about/CoreValues.vue') },
-      { path: '/our-culture', name: 'Our Culture', component: () => import('../views/about/Culture.vue') },
-      { path: '/faq', name: 'FAQ\'s', component: () => import('../views/about/FAQ.vue') }
+      { path: 'principle-of-credit-union-operating', name: 'Principle of Credit Union Operating', component: () => import('../views/about/PCUO.vue') },
+      { path: 'principle-of-co-operation', name: 'Principle of Co-Operation', component: () => import('../views/about/PCO.vue') },
+      { path: 'our-core-values', name: 'Our Core Values', component: () => import('../views/about/CoreValues.vue') },
+      { path: 'our-culture', name: 'Our Culture', component: () => import('../views/about/Culture.vue') },
+      { path: 'faq', name: 'FAQ\'s', component: () => import('../views/about/FAQ.vue') }
     ] 
   },
   {

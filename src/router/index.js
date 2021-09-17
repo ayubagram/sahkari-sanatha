@@ -30,6 +30,28 @@ const routes = [
     ] 
   },
   {
+    path: '/deposite',
+    redirect: '/deposite/savings-schemes',
+    component: () => import(/* webpackChunkName: "deposite" */ '../views/deposite/Deposite.vue'),
+    children: [
+      { path: 'saving-schemes', name: 'Saving Schemes', component: () => import(/* webpackChunkName: "services" */ '../views/deposite/Saving.vue'), },
+      { path: 'periodic-fixed-deposit-schemes', name: 'Periodic (Fixed) Deposite Scheme', component: () => import('../views/deposite/FixedDeposite.vue') },
+      { path: 'recurring-regular-deposit-savings', name: 'Recurring (Regular Deposit) Schemes', component: () => import('../views/deposite/RecurringDeposite.vue') },
+      { path: 'members-compulsion-savings', name: 'Members Compulsion Savings', component: () => import('../views/deposite/MemberCompulsion.vue') },
+      { path: 'member-regular-saving', name: 'Kumari 365 Days Ragular Saving', component: () => import('../views/deposite/MemberRegular.vue') },
+      { path: 'travel-saving', name: 'Travel Saving', component: () => import('../views/deposite/Travel.vue') },
+      { path: 'farmers-saving', name: 'Farmers Saving', component: () => import('../views/deposite/Farmers.vue') },
+      { path: 'labour-saving', name: 'Labour Saving', component: () => import('../views/deposite/Labour.vue') },
+      { path: 'micro-finance-group-saving', name: 'Micro Group Finance Saving', component: () => import('../views/deposite/MicroGroup.vue') },
+      { path: 'life-secured-saving', name: 'Life Secured Saving', component: () => import('../views/deposite/LifeSecured.vue') },
+      { path: 'khutruke-saving', name: 'Khutruke Saving', component: () => import('../views/deposite/Khutruke.vue') },
+      { path: 'health-treatment-saving', name: 'Health Treatement Saving', component: () => import('../views/deposite/Health.vue') },
+      { path: 'self-employment-saving', name: 'Self Employement Saving', component: () => import('../views/deposite/SelfEmployment.vue') },
+      { path: 'youth-child-saving', name: 'Youth & Child Saving', component: () => import('../views/deposite/YouthChild.vue') },
+      { path: 'festival-expenses-saving', name: 'Festival Expenses Saving', component: () => import('../views/deposite/Festival.vue') }
+    ]
+  },
+  {
     path: '/services',
     redirect: '/services/mobile-banking',
     component: () => import(/* webpackChunkName: "services" */ '../views/services/Services.vue'),

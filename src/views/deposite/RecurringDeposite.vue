@@ -2,7 +2,7 @@
   <v-container>
     <div class="download__links">
       <div class="download__title">Sahkari saving offers the following Recurring Saving:</div><br>
-      <p class="mb-2">A. RECURRING (Regular Deposit) SAVINGS</p>
+      <b class="mb-2">A. RECURRING (Regular Deposit) SAVINGS</b>
       <table>
         <thead>
           <tr class="primary">
@@ -19,7 +19,7 @@
       </table>
       <br>
       
-      <p class="mb-2">B. RECURRING (Child Education) SAVINGS</p>
+      <b class="mb-2">B. RECURRING (Child Education) SAVINGS</b>
       <table>
         <thead>
           <tr class="primary">
@@ -36,7 +36,7 @@
       </table>
       <br>
 
-      <p>C. KHUTRUKE SAVINGS</p>
+      <b>C. KHUTRUKE SAVINGS</b>
       <p class="mb-2">This A/c can be open for minimum balance 100NPR for 1 to 3 years’ time deposit. Savings must be maintained on regular installment basis; have to fix an amount of deposit while in opening an A/c to daily or monthly collection.</p>
       <table>
         <thead>
@@ -54,7 +54,7 @@
       </table>
       <br>
 
-      <p class="mb-2">D. KUMARI “DHAN BRIDHHI” REGULAR SAVINGS</p>  
+      <b class="mb-2">D. KUMARI “DHAN BRIDHHI” REGULAR SAVINGS</b>  
       <table>
         <thead>
           <tr class="primary">
@@ -71,8 +71,6 @@
           </tr>  
         </tbody>
       </table>
-      <br>
-
     </div>
   </v-container>  
 </template>

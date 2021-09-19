@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <div class="download__links">
-      <p>A. PERIODIC (Fixed) DEPOSIT SCHEMES</p>
+      <b>A. PERIODIC (Fixed) DEPOSIT SCHEMES</b>
       <p>Periodic deposit schemes are for a fixed amount of deposits as a time deposit A/c, where KUSCCOOP members can deposit minimum amount of 10,000NPR to an open limit to top deposit. Interest rates will be differentiated & can be negotiated always according to financial fair market compition scenario and duration in terms of taking deposits for 3 months up to 3 years.</p>
       <br>
-      <p class="mb-2">B. GENERAL PERIODIC (Fixed) DEPOSIT SCHEMES</p>
+      <b class="mb-2">B. GENERAL PERIODIC (Fixed) DEPOSIT SCHEMES</b>
       <table>
         <thead>
           <tr class="primary">
@@ -23,7 +23,7 @@
       </table>
       <br>
       
-      <p class="mb-2">C. CHILD EDUCATION PERIODIC (Fixed) DEPOSIT SCHEMES</p>
+      <b class="mb-2">C. CHILD EDUCATION PERIODIC (Fixed) DEPOSIT SCHEMES</b>
       <table>
         <thead>
           <tr class="primary">
@@ -42,7 +42,7 @@
       </table>
       <br>
 
-      <p class="mb-2">D. SENIOR CITIZENS PERIODIC (Fixed) DEPOSIT SCHEMES</p>
+      <b class="mb-2">D. SENIOR CITIZENS PERIODIC (Fixed) DEPOSIT SCHEMES</b>
       <table>
         <thead>
           <tr class="primary">

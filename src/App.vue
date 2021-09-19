@@ -62,7 +62,10 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
+} 
+
+.v-list { padding: 0 !important; }
+.v-menu__content, .v-list--nav .v-list-item { border-radius: 0 !important; }
 
 /* Input Fields */
 .v-text-field fieldset, .v-text-field .v-input__control, .v-text-field .v-input__slot { border-radius: 0 !important; }
@@ -159,7 +162,6 @@ ul li {
 .quick__card {
   box-shadow: 1px 5px 15px 0 rgb(0 0 0 / 20%);
   border-top: 4px solid #00a652;
-  border-radius: 6px;
 }
 .download__title {
   font-size: 28px;

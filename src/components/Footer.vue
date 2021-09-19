@@ -3,19 +3,18 @@
     <v-container >
       <div class="footer__info">
         <div class="footer__contact">
-          <div class="download__title">Contact Us</div>  
-          <div class="d-flex flex-column" style="grid-gap: 20px;">
+          <div class="download__title mb-6">Contact Us</div>  
+          <div class="d-flex flex-column" style="grid-gap: 12px;">
             <div class="d-flex" style="grid-gap: 12px;" v-for="(contact, c) in contacts" :key="c">
               <v-icon size="20" color="primary" v-text="contact.icon" />
               <p>{{ contact.data }}</p>
             </div>  
           </div>
-          <div class="headline mb-2 mt-6">Connect With Us</div> 
-          <div class="d-flex flex-wrap" style="grid-gap: 8px;">
-            <v-btn v-for="(social, s) in socials" :key="s" height="32" tile text outlined :color="social.color" target="_blank" :href="social.href">
-              <v-icon left v-text="social.icon" />
-              <span v-text="social.title" />
-            </v-btn>  
+          <div class="mt-6">
+            <div class="download__title">Follow Us</div>  
+            <v-btn icon v-for="(social, s) in socials" :key="s" :color="social.color">
+              <v-icon v-text="social.icon" />
+            </v-btn>
           </div>
         </div>
 
@@ -24,7 +23,7 @@
         </div>
       </div>  
       <v-divider class="my-6" />  
-      <div class="d-flex flex-wrap justify-space-between">
+      <div class="d-flex flex-wrap justify-center justify-sm-space-between" style="grid-gap: 12px;">
         <p>Sahkari Sanstha. All Rights Reserved.</p>  
         <p>2010 - {{ new Date().getFullYear() }}</p>
         <p>Powered By <a href="https://www.agraminfotech.com" target="_blank">Agram Infotech</a></p>
@@ -47,7 +46,7 @@ export default {
       { icon: 'mdi-youtube', href: 'https://www.youtube.com', color: '#FF0000', title: 'youTube' },
       { icon: 'mdi-instagram', href: 'https://www.instagram.com', color: '#8a3ab9', title: 'Instagram' },
       { icon: 'mdi-linkedin', href: 'https://www.linkedin.com', color: '#0077b5', title: 'Linkedin' }, 
-    ] 
+    ]
   })  
 }
 </script>

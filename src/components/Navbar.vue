@@ -124,7 +124,7 @@ export default {
   },
   created() {
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 250) this.fixed = true
+      if(window.scrollY > 100) this.fixed = true
       else this.fixed = false
     })
   }

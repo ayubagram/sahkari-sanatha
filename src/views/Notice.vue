@@ -4,7 +4,7 @@
       <div class="download__links">
         <ul class="d-flex flex-column" style="grid-gap: 20px;">
           <li v-for="a in 4" :key="a">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            <span style="color: #337ab7 !important; cursor: pointer !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
             <v-divider class="mt-3" />
           </li>  
         </ul>
@@ -16,10 +16,3 @@
     </v-container>
   </div>  
 </template>
-
-<script>
-import Card from '../components/Cards'
-export default {
-  components: { Card }
-}
-</script>

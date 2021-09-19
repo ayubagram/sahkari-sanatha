@@ -51,6 +51,7 @@ p {
   margin-bottom: 0 !important;
   text-align: justify;
 }
+b { font-size: 20px; }
 .v-btn span {
   font-size: 14px !important;
   text-transform: capitalize !important;
@@ -122,6 +123,11 @@ input[type=number] { -moz-appearance: textfield; }
   box-shadow: 2px 2px 10px 0 rgb(0 0 0 / 10%);
   overflow: hidden;
   border-radius: 4px;
+  cursor: pointer;
+  transition: ease-in-out 250ms;
+}
+.news__container:hover {
+  transform: translateY(-6px);
 }
 .news__img { height: 200px; }
 
@@ -148,7 +154,7 @@ ul li {
   font-size: 1rem;
   letter-spacing: .7px;
   font-weight: 300;
-  color: #337ab7;
+  /* color: #337ab7; */
 }
 .quick__card {
   box-shadow: 1px 5px 15px 0 rgb(0 0 0 / 20%);
@@ -200,7 +206,7 @@ table tr th, table tr td {
   height: 50px;
   padding: 0 10px;
 }
-td { font-weight: 300; }
+td { font-weight: 300; font-size: 18px; }
 
 /* Media Queries */
 @media (max-width: 1060px) {

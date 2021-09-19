@@ -20,9 +20,7 @@
 </template>
 
 <script>
-import Card from '../../components/Cards'
 export default {
-  components: { Card },
   data: () => ({
     items: [
       'To provide Smart, Safe and secured Co-Operative banking services to the member.',

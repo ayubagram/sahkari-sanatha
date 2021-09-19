@@ -7,6 +7,9 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+import Card from './components/Card'
+Vue.component('Card', Card)
+
 new Vue({
   router,
   store,

@@ -31,13 +31,6 @@
   </v-container>  
 </template>
 
-<script>
-import Card from '../../components/Cards'
-export default {
-  components: { Card }
-}
-</script>
-
 <style>
 .department table { table-layout: auto !important; }
 </style>

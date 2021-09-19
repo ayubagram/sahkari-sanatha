@@ -15,9 +15,7 @@
 </template>
 
 <script>
-import Card from '../../components/Cards'
 export default {
-  components: { Card },
   data: () => ({
     items: [
       { title: 'Our dreams are empowered by our values', sub: 'Our core values have shaped our culture and defined our character. They are designed to generate enduring, profitable, secured and sustainable growth for our institution, members and ourselves.' },

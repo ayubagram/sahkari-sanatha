@@ -1,6 +1,7 @@
 <template>
-  <v-container class="pa-5 pa-sm-6 pa-md-7 pa-lg-8" style="border: .5px solid rgb(0 0 0 / 10%); ">
-    <v-row justify="center">
+  <v-container>
+    <div class="download__links">
+      <v-row justify="center">
       <v-expansion-panels accordion>
         <v-expansion-panel v-for="(item, i) in items" :key="i">
           <v-expansion-panel-header class="title">{{ item.title }}</v-expansion-panel-header>
@@ -8,6 +9,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </v-row>
+    </div>
   </v-container>  
 </template>
 

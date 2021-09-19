@@ -52,6 +52,29 @@ const routes = [
     ]
   },
   {
+    path: '/loan',
+    redirect: '/deposite/agriculture-farming-loan',
+    component: () => import(/* webpackChunkName: "deposite" */ '../views/loan/Loan.vue'),
+    children: [
+      { path: 'agriculture-farming-loan', name: 'Agriculture &  Farmin And Loan', component: () => import('../views/loan/Agriculture.vue') },
+      { path: 'business-loan', name: 'Business Loan', component: () => import('../views/loan/Business.vue') },
+      { path: 'medical-loan', name: 'Medical Loan', component: () => import('../views/loan/Medical.vue') },
+      { path: 'small-business-promotion-loan', name: 'Small Business Promotion Loan', component: () => import('../views/loan/SmallBusiness.vue') },
+      { path: 'real-estate-loan', name: 'Real Estate Loan', component: () => import('../views/loan/RealEstate.vue') },
+      { path: 'home-loan', name: 'Home Loan', component: () => import('../views/loan/Home.vue') },
+      { path: 'education-loan', name: 'Education Loan', component: () => import('../views/loan/Education.vue') },
+      { path: 'hire-purchase-loan', name: 'Hire Purchase Loan', component: () => import('../views/loan/HirePurchase.vue') },
+      { path: 'women-entrepreneur-loan', name: 'Women Entrepreneur Loan', component: () => import('../views/loan/WomenEntrepreneur.vue') },
+      { path: 'youth-entrepreneur-loan', name: 'Youth Entrepreneur Loan', component: () => import('../views/loan/YouthEntrepreneur.vue') },
+      { path: 'line-of-credit-loan', name: 'Line of Credit Loan', component: () => import('../views/loan/LineOfCredit.vue') },
+      { path: 'periodic-fixed-deposit-against-loan', name: 'Perfiodic (Fixed) Deposite Against Loan', component: () => import('../views/loan/Periodic.vue') },
+      { path: 'microfinance-loan', name: 'Microfinance Loan', component: () => import('../views/loan/MicroFinance.vue') },
+      { path: 'trading-loan', name: 'Tading Loan', component: () => import('../views/loan/Trading.vue') },
+      { path: 'foreign-employment-purpose-loan', name: 'Foreign Employment Purpose Loan', component: () => import('../views/loan/Foreign.vue') },
+      { path: 'festival-loan', name: 'Festival Loan', component: () => import('../views/loan/Festival.vue') },
+    ]
+  },
+  {
     path: '/services',
     redirect: '/services/mobile-banking',
     component: () => import(/* webpackChunkName: "services" */ '../views/services/Services.vue'),

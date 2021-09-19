@@ -19,9 +19,7 @@
 </template>
 
 <script>
-import Card from '../../components/Cards'
 export default {
-  components: { Card },
   data: () => ({
     items: [
       { title: 'Enrivhing our employees', sub: 'At Kumari Saving & Credit Co-Operative Ltd. (KUSCCOOP) each employee is a vital part of the (KUSCCOOP) family. Our employees are our assets and we believe in continuous investment in our human capital through talent nurturing, reward programs in house, and other national and international trainings, seminar meting and team based interaction. We offer facilities such as leave allowances, insurance, performance and product base incentives, permanent job and pension etc.  ' },

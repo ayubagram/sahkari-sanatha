@@ -34,9 +34,7 @@
 </template>
 
 <script>
-import Card from '../../components/Cards'
 export default {
-  components: { Card },
   data: () => ({
     items: [
       'Operation & Member Service Department',

@@ -36,9 +36,7 @@
 </template>
 
 <script>
-import Card from '../../components/Cards'
 export default {
-  components: { Card },
   data: () => ({
     socials: [
       { icon: 'mdi-facebook', href: 'https://www.facebook.com', color: '#4267B2' },

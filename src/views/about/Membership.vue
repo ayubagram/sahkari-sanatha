@@ -13,10 +13,3 @@
     </div>
   </v-container>  
 </template>
-
-<script>
-import Card from '../../components/Cards'
-export default {
-  components: { Card }
-}
-</script>

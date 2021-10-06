@@ -9,7 +9,7 @@
 
     <v-list expand nav tile dense>
       <v-list-item-group v-model="selectedItem">
-        <div v-for="(item, i) in menu" :key="i">
+        <div v-for="(item, i) in menus" :key="i">
           <v-list-group v-if="item.children" :value="false" :prepend-icon="item.icon" active-class="active__class">
             <template v-slot:activator>
               <v-list-item-title v-text="item.title" style="letter-spacing: 1px; font-weight: 400 !important; font-size: 16px !important;" />
@@ -37,94 +37,7 @@
 export default {
   data: () => ({
     selectedItem: 0,
-    menu: [
-      { title: 'Home', icon: 'mdi-home', to: '/' },
-      {
-        title: 'About Us',
-        icon: 'mdi-account',
-        to: '/about',
-        children: [
-          { title: 'About Sahkari', to: '/sahkari' },
-          { title: 'Membership', to: '/membership' },
-          { title: 'Mission, Vision & Objectives', to: '/mission-vision' },
-          { title: 'Organizational Structure', to: '/organizational-structure' },
-          { title: 'Chariman\'s Message', to: '/chairmans-message' },
-          { title: 'Manager\'s Message', to: '/managers-message' },
-          { title: 'Management Teams', to: '/management-teams' },
-          { title: 'Department', to: '/department' },
-          { title: 'Branch (M.S.C)', to: '/branch-msc' },
-          { title: 'Business Hour', to: '/business-hours' },
-          { title: 'Principles of Credi Union Operating', to: '/principle-of-credit-union-operating' },
-          { title: 'Principles of Co-Operation', to: '/principle-of-co-operation' },
-          { title: 'Our Core Values', to: '/our-core-values' },
-          { title: 'Our Culture', to: '/our-culture' },
-          { title: 'FAQ\'s', to: '/faq' }
-        ]
-      },
-      {
-        title: 'Deposite Scheme',
-        icon: 'mdi-finance',
-        to: '/deposite',
-        children: [
-          { title: 'Savings Schemes', to: '/saving-scheme' },
-          { title: 'Periodic(Fixed) Deposite Schemes', to: '/saving-scheme' },
-          { title: 'Reccuring(Regular) Deposite Schemes', to: '/saving-scheme' },
-          { title: 'Members Cumpulsion Savings', to: '' },
-          { title: 'Kumari 365 Days Ragular Saving', to: '' },
-          { title: 'Travel Saving', to: '/travel-saving' },
-          { title: 'Farmers Saving', to: '/travel-saving' },
-          { title: 'Labour Saving', to: '/labour-saving' },
-          { title: 'Micro Finance Group Saving', to: '/labour-saving' },
-          { title: 'Members Life Secured Saving', to: '' },
-          { title: 'Khutruke Saving', to: '' },
-          { title: 'Health Treatement Saving', to: '' },
-          { title: 'Self Employment Saving', to: '' },
-          { title: 'Youth & Child Saving', to: '' },
-          { title: 'Other', to: '' }
-        ]
-      },
-      {
-        title: 'Loan Scheme',
-        icon: 'mdi-cash',
-        to: '/loan',
-        children: [
-          { title: 'Agriculture & Farming Loan', to: '/agriculture-farming-loan' },
-          { title: 'Business Loan', to: '/business-loan' },
-          { title: 'Health Treatement Loan', to: '/medical-loan' },
-          { title: 'Cottage & Small Industries Business Promotion Load', to: '/small-business-promotion-loan' },
-          { title: 'Real Estate Loan', to: '/real-estate-loan' },
-          { title: 'Home Loan', to: '/home-loan' },
-          { title: 'Education Loan', to: '/education-loan' },
-          { title: 'Hire Purchase Loan', to: '/hire-purchase-loan' },
-          { title: 'Women Entrepreneur Loan', to: '/women-entrepreneur-loan' },
-          { title: 'Youth Entrepreneur Loan', to: '/youth-entrepreneur-loan' },
-          { title: 'Line of Credit Loan', to: '/line-of-credit-loan' },
-          { title: 'Periodic(Fixed) Deposite against Loan', to: '/periodic-fixed-deposit-against-loan' },
-          { title: 'Microfinance Loan', to: '/microfinance-loan' },
-          { title: 'Trading Loan', to: '/trading-loan' },
-          { title: 'Foreign Employment Purchase Loan', to: '/foreign-employment-purpose-loan' },
-          { title: 'Festival Loan', to: '/festival-loan' }
-        ]
-      },
-      {
-        title: 'Services',
-        icon: 'mdi-cog',
-        to: '/services',
-        children: [
-          { title: 'Mobile Banking', to: '/mobile-banking' },
-          { title: 'ATM Services', to: '/atm-card-service' },
-          { title: 'SMS Banking Services', to: '/sms-banking' },
-          { title: 'Remittance Services', to: '/remittance-services' },
-          { title: 'Other', to: '/other' }
-        ]
-      },
-      { title: 'Reports', icon: 'mdi-poll', to: '/reports' },
-      { title: 'Notice', icon: 'mdi-post', to: '/notice' },
-      { title: 'News', icon: 'mdi-post-outline', to: '/news' },
-      { title: 'Gallery', icon: 'mdi-image-multiple', to: '/gallery' },
-      { title: 'Download', icon: 'mdi-download', to: '/download' },
-      { title: 'Contact', icon: 'mdi-account-box', to: '/contact' }
-    ]
+    
   }),
 
   computed: {

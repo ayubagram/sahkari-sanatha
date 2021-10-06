@@ -20,9 +20,6 @@ import Footer from './components/Footer'
 export default {
   name: 'App',
   components: { TopHeader, Navbar, Sidebar, Breadcumb, Footer },
-  data: () => ({
-    //
-  }),
 };
 </script>
 
@@ -36,9 +33,12 @@ html { scroll-behavior: smooth; }
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 ::-webkit-scrollbar { display: none; }
-
+.v-toolbar__content { padding: 4px 12px !important; }
+.v-toolbar__content .v-btn.v-btn--icon.v-size--default {
+  height: 40px !important;
+  width: 40px !important;
+}
 .container {
   max-width: 1250px !important;
   margin: 0 auto !important;

@@ -12,11 +12,11 @@
       </div>  
     </div>
     <div class="d-flex align-center top_social" style="grid-gap: 12px;">
-      <div style="max-width: 150px;">
+      <!-- <div style="max-width: 150px;">
         <v-select dense outlined hide-details :items="['Nepali', 'English']" v-model="language" />
-      </div>
+      </div> -->
       <div>
-        <v-btn icon v-for="(social, s) in socials" :key="s" :color="social.color">
+        <v-btn icon v-for="(social, s) in socials" :key="s" :color="social.color" target="_blank" :href="social.href">
           <v-icon v-text="social.icon" />
         </v-btn>
       </div>
@@ -38,16 +38,6 @@ export default {
       { icon: 'mdi-youtube', href: 'https://www.youtube.com', color: '#FF0000', title: 'youTube' },
       { icon: 'mdi-instagram', href: 'https://www.instagram.com', color: '#8a3ab9', title: 'Instagram' },
       { icon: 'mdi-linkedin', href: 'https://www.linkedin.com', color: '#0077b5', title: 'Linkedin' }, 
-    ],
-    countries: [
-      {
-        code: "np",
-        title: "Nepali",
-      },
-      {
-        code: "en",
-        title: "English",
-      }  
     ]
   })
 }

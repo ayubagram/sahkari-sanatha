@@ -94,6 +94,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] { -moz-appearance: textfield; }
 
+/* List Item */
+.v-list--dense .v-list-item .v-list-item__title { line-height: 2rem !important; }
+
 /* Text Ellipse */
 .text__ellipse {
   overflow: hidden;

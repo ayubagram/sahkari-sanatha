@@ -3,7 +3,7 @@
     <div class="news">
       <div v-for="(n, i) in news" :key="i" class="news__container">  
         <div class="news__img">
-          <img :src="n" :alt="news.title">  
+          <img :src="n.image" :alt="n.title">  
         </div>
         <div class="pa-3 pa-md-4">
           <p class="text__ellipse black--text">{{ n.description }}</p>

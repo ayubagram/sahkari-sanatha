@@ -26,7 +26,7 @@ export default {
   methods: {
     async get() {
       this.$store.commit('SET_OVERLAY', true)
-      await this.$binding("notice", db.collection("notice").orderBy('createdAt', 'desc'))
+      await this.$binding("notice", db.collection("notice").where('status', '==', true).orderBy('createdAt', 'desc'))
       this.$store.commit('SET_OVERLAY', false)
     }
   },

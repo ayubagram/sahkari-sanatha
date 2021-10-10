@@ -38,12 +38,12 @@
     <div class="py-8 py-sm-10 py-md-12 py-lg-14" style="background-color: rgb(0 0 0 / 10%);">
       <div class="text-center headline mb-3">Our News</div>
       <v-container class="services">
-        <div class="service__container" v-for="a in 3" :key="a">
+        <div class="service__container" v-for="(n, a) in news" :key="a">
           <div class="service__img">
-            <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" alt="Service description">
+            <img src="https://paymentweek.com/wp-content/uploads/2017/08/atms_img7568.jpg" :alt="n.title">
           </div>
           <div class="primary white--text pa-3">
-            <span class="text__ellipse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam tempora, quos eius amet modi at, quibusdam repudiandae atque neque animi numquam commodi doloremque, vitae minima ipsa id dolorum? Accusamus, non.</span>
+            <span class="text__ellipse">{{ n.description }}</span>
           </div>
         </div>
       </v-container>
@@ -56,8 +56,8 @@
     <div class="py-8 py-sm-10 py-md-12 py-lg-14">
       <div class="text-center headline mb-3">Our Gallery</div>
       <v-container class="gallery">
-        <div class="gallery__img" v-for="(img, i) in images" :key="i">
-          <img :src="img" loading="lazy" alt="Image Description">
+        <div class="gallery__img" v-for="(img, i) in gallery" :key="i">
+          <img :src="img.image" loading="lazy" :alt="img.title">
         </div>  
       </v-container>
       <div class="text-center mt-4">
@@ -79,16 +79,24 @@
 
 <script>
 import Carousel from '../components/Carousel.vue'
+import { db } from '../firebase'
 export default {
   components: { Carousel },
   data: () => ({
-    images: [
-      'https://images.indianexpress.com/2020/06/office-new-1200.jpg',
-      'https://cdn.dnaindia.com/sites/default/files/styles/full/public/2021/02/15/957659-offices-guidelines.jpg',
-      'https://m-moser.imgix.net/uploads/2019_06/Hyatt_1-3288_AJL_-_HKG_2018-08_0124-HDR_1.jpg',
-      'https://assets-news.housing.com/news/wp-content/uploads/2019/02/13152538/Vastu-tips-for-office-to-bring-prosperity-at-work-FB-1200x700-compressed.jpg',
-    ],
-  })
+    news: [],
+    gallery: []
+  }),
+  methods: {
+    async get() {
+      this.$store.commit('SET_OVERLAY', true)
+      await this.$binding("news", db.collection("news").orderBy('createdAt', 'desc'))
+      await this.$binding("gallery", db.collection("gallery").orderBy('createdAt', 'desc'))
+      this.$store.commit('SET_OVERLAY', false)
+    }
+  },
+  created() {
+    this.get()
+  }
 }
 </script>
 

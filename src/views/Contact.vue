@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { db } from '../firebase'
 export default {
   data: () =>({
     contacts: [
@@ -68,9 +69,21 @@ export default {
     ]
   }),
   methods: {
-    submit() {
-      if(this.$refs.form.validate()) console.log('validated')
-      else console.log('not validated')
+    async submit() {
+      if(this.$refs.form.validate()) {
+        this.form['createdAt'] = new Date().getTime()
+        this.form['updateddAt'] = new Date().getTime()
+        this.$store.commit('SET_OVERLAY', true)
+        await db.collection('message').add(this.form).then( () => {
+          alert('You response has been recorded. We\'ll get back to you as soon as possible. Thank You')
+          this.form.name = null
+          this.form.email = ''
+          this.form.mobile = ''
+          this.form.subject = ''
+          this.form.message = null
+        }).catch( e => console.log(e))
+        this.$store.commit('SET_OVERLAY', false)
+      }
     }
   }
 }

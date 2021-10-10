@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Overlay />
     <TopHeader />
     <Navbar />
     <Sidebar />
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import Overlay from './components/Overlay.vue'
 import TopHeader from './components/TopHeader'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
@@ -19,7 +21,7 @@ import Breadcumb from './components/Breadcumb'
 import Footer from './components/Footer'
 export default {
   name: 'App',
-  components: { TopHeader, Navbar, Sidebar, Breadcumb, Footer },
+  components: { Overlay, TopHeader, Navbar, Sidebar, Breadcumb, Footer },
 };
 </script>
 

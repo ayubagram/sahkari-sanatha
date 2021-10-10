@@ -7,6 +7,11 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+import VueFirestore from 'vue-firestore'
+require('firebase/firestore')
+Vue.use(VueFirestore)
+
+
 import Card from './components/Card'
 Vue.component('Card', Card)
 
@@ -48,7 +53,7 @@ Vue.mixin({
       { title: 'Gallery', icon: 'mdi-image-multiple', to: '/gallery' },
       { title: 'Downloads', icon: 'mdi-download', to: '/downloads' },
       { title: 'Notice', icon: 'mdi-post', to: '/notice' },
-      { title: 'Career', icon: 'mdi-handshake', to: '/career' },
+      // { title: 'Career', icon: 'mdi-handshake', to: '/career' },
       { title: 'Contact', icon: 'mdi-account-box', to: '/contact' }
     ]
   })
